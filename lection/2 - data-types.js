@@ -84,7 +84,7 @@ let someArrObj = {
 }
 
 console.log(someArr[0]);
-console.log(someArrObj.0);
+console.log(someArrObj,0);
 
 
 let somePerson = {

@@ -65,7 +65,7 @@ console.log(x);
 // == порівняння
 // === строге порівняння
 
-console.log(2*4 = 8);
+//console.log(2*4 = 8);
 console.log(2*4 == 8);
 console.log(2*4 == '8');
 console.log(2*4 === '8');
@@ -86,14 +86,14 @@ console.log(isChecked || isClosed); // false || false => false; true || false =>
 
 // Я хочу купити картоплю фрі та гамбургер, якщо обидві страви є у наявності, то я їх купую і буду ситий.
 
-let hamburger = true;
-let fries = true;
+let hamburger3 = true;
+let fries3 = true;
 
-if (hamburger && fries){
+if (hamburger3 && fries3){
     console.log('Я ситий');
 } 
 
-console.log(hamburger && fries)
+console.log(hamburger3 && fries3)
 
 
 let hamburger1 = 0; // 0, null, undefined, '', NaN => false
