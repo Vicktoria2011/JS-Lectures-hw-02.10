@@ -1,0 +1,369 @@
+/*
+1.
+*/
+
+function McDonalds(gamburgers, friesPotatos) {
+    if (gamburgers > 3 && friesPotatos >= 1) {
+        console.log('Ми поїли');
+    } else if (gamburgers < 4 || friesPotatos < 1) {
+        console.log('Ми йдемо в інше кафе');
+    }
+}
+
+let gamburgers = 4;
+let friesPotatos = 1;
+McDonalds(gamburgers, friesPotatos);
+
+/*
+2.
+*/
+
+function findPrice(price) {
+    if(price >= 1000 && price <= 1900) {
+        console.log('значення ціни товару між 1000 та 1900 включно')
+    }
+}
+
+let price = 1000;
+findPrice(price);
+
+/*
+3.
+*/
+
+//1
+function findPrice(priceRandom) {
+    if(!((priceRandom <= 1000) && (priceRandom >= 1900))) {
+        console.log('значення ціни товару не знаходиться між 1000 та 1900 включно')
+    } 
+}
+
+let priceRandom = 19000;
+let priceMin = 1000;
+let priceMax = 1900;
+findPrice(priceRandom);
+
+
+//2
+function findPrice(priceRandom) {
+    if((priceRandom1 <= 1000) || (priceRandom1 >= 1900)) {
+        console.log('значення ціни товару не знаходиться між 1000 та 1900 включно')
+    }
+}
+
+let priceRandom1 = 1900;
+let priceMin1 = 1000;
+let priceMax1 = 1900;
+findPrice(priceRandom1);
+
+/*
+4.
+*/
+
+function findSeason(season) {
+    if(season === 0){
+        console.log("Сейчас зима")
+    }else if(season === 1){
+        console.log("Сейчас весна")
+    }else if(season === 2){
+        console.log("Сейчас лето")
+    }else if(season === 3){
+        console.log("Сейчас осень")
+    }else {
+        console.log('Value does not exist')
+    }
+}
+
+let season = 3;
+let winter = 0;
+let spring = 1;
+let summer = 2;
+let autumn = 3;
+findSeason(season);
+
+або
+
+function findSeason(season1) {
+    if(seasonNum === 1){
+        season1 = "Зима"
+    } else if(seasonNum === 2){
+        season1 = "Весна"
+    } else if(seasonNum === 3){
+        season1 = "Літо"
+    } else if(seasonNum === 4){
+        season1 = "Осінь"
+    } else {
+        season1 = 'Value does not exist'
+    }
+    console.log("Зараз: " + season1);
+}
+
+const seasonNum = 4;
+let season1;
+findSeason(season1);
+
+/*
+5.
+*/
+
+function findAvg(a, b, c) {
+    if (a > b) {
+        if (a > c) {
+            // a - max
+            if (b > c) {
+                return b;
+            } else {
+                return c;
+            }
+        } else {
+            return a;
+        }
+    } 
+}
+
+const a = 5;
+const b = 4;
+const c = 3;
+
+const avg = findAvg(a, b, c);
+console.log("Середнє число по значенню " + avg);
+
+/*
+6.
+*/
+
+function getDayOfWeek(day) {
+    switch (day) {
+        case 0:
+            return "Воскресенье";
+        case 1:
+            return "Понедельник";
+        case 2:
+            return "Вторник";
+        case 3:
+            return "Среда";
+        case 4:
+            return "Четверг";
+        case 5:
+            return "Пятница";
+        case 6:
+            return "Суббота";
+        default:
+            return "Невірний день";
+    }
+}
+
+const day = new Date().getDay();
+const dayOfWeek = getDayOfWeek(day);
+console.log(dayOfWeek);
+
+
+/*
+7.
+*/
+
+function calculate(a1, b1, operation) {
+    let result;
+
+    switch (operation) {
+        case "+":
+            result = a1 + b1;
+            break;
+        case "-":
+            result = a1 - b1;
+            break;
+        case "*":
+            result = a1 * b1;
+            break;
+        case "/":
+            result = a1 / b1;
+            break;
+    }
+    console.log(result);
+}
+
+const a1 = 2;
+const b1 = 1;
+const c1 = '+';
+calculate(a1, b1, c1);
+
+
+/*
+8.
+*/
+
+function fillMyArray(min, max) {
+    let myArray = [];
+
+    for (let i = min; i <= max; i++) {
+        myArray.push(i);
+    }
+    return myArray;
+}
+
+let myArray = fillMyArray(1, 5);
+console.log(myArray);
+
+
+/*
+9.
+*/
+
+function fillMyArray(min, max) {
+    let myArray1 = [];
+
+    for (let i = min; i <= max; i++) {
+        if (i % 2 === 0) {
+            myArray1.push(i);
+        }
+    }
+    return myArray1;
+}
+
+let myArray1 = fillMyArray(1, 9);
+console.log(myArray1);
+
+
+function fillMyArray(min, max) {
+    let myArray2 = [];
+
+    for (let i = min; i <= max; i++) {
+        if (i % 2 !== 0) {
+            myArray2.push(i);
+        }
+    }
+    return myArray2;
+}
+
+let myArray2 = fillMyArray(1, 9);
+console.log(myArray2);
+
+
+/*
+10.
+*/
+
+function findTotal(myArr) {
+    let total = 0;
+
+    for (let i = 0; i < myArr.length; i++) {
+    total += myArr[i];
+    }
+
+    return total;
+}
+
+const myArr = [2, 3, 4, 5, 6];
+let total = findTotal(myArr);
+console.log(total);
+
+/*
+11.
+*/
+
+function writeArr(arr1) {
+    for (let i = 0; i < arr1.length; i++) {
+        for (let i1 = 0; i1 < arr1[i].length; i1++) {
+            console.log(arr1[i][i1]);
+        }
+    }
+} 
+
+const arr1 = [[1, 2], [3, 4], [5, 6]];
+writeArr(arr1);
+
+/*
+12.
+*/
+
+function returnResult(arr3) {
+    for (let i = 0; i < arr3.length; i++) {
+        for (let i1 = 0; i1 < arr3[i].length; i1++) {
+            product *= arr3[i][i1];
+        }
+    }
+    console.log(product);
+}
+
+const arr3 = [[1], [2], [3]]  // >  console.log(product) має повернути 6
+let product = 1;
+returnResult(arr3);
+
+
+function returnResult(arr4) {
+    for (let i = 0; i < arr4.length; i++) {
+        for (let i1 = 0; i1 < arr4[i].length; i1++) {
+            product2 *= arr4[i][i1];
+        }
+    }
+console.log(product2);  
+}
+
+const arr4 = [[1, 2], [3, 4], [5, 6, 7]]  // >  console.log(product) має повернути 5040
+let product2 = 1;
+returnResult(arr4);
+
+
+function returnResult(arr5) {
+for (let i = 0; i < arr5.length; i++) {
+    for (let i1 = 0; i1 < arr5[i].length; i1++) {
+        product3 *= arr5[i][i1];
+    }
+  }
+
+console.log(product3);
+}
+
+const arr5 = [[5, 1], [0.2, 4, 0.5], [3, 9]]  // >  console.log(product) має повернути 54
+let product3 = 1;
+returnResult(arr5);
+
+/*
+13.
+*/
+
+function deleteLetters(text) {
+    return text.replace(/[а, е, є, и, і, о, у, ю, я]/gi,'');
+    }
+
+var text="ГідроелектростанціЯ";
+var s=text.replace(/[а, е, є, и, і, о, у, ю, я]/gi,'');
+console.log(s);
+
+/*
+14.
+*/
+
+function metersOnKilometers (m) {
+let km = m/1000;
+
+    if(km === 1){
+        console.log(m + " метрів" + " = " + m/1000 + " кiлометр ");
+    }else if(km === 2, 3, 4){
+        console.log(m + " метри" + " = " + m/1000 + " кiлометра ");
+    }else if(km === 0, 5 < m < 20){
+        console.log(m + " метрів" + " = " + m/1000 + " кiлометрів ");
+    } else if(km === 0,5){
+        console.log(m + " метра" + " = " + m/1000 + " кiлометра ");
+    } 
+}
+
+metersOnKilometers (1000);
+
+або
+
+function metersOnKilometers (m1) {
+let km1 = m1 / 1000;
+
+if (km1 === 1) {
+  console.log(m1 + " метрів" + " = " + km1 + " кілометр");
+} else if (km1 >= 2 && km1 <= 4) {
+  console.log(m1 + " метри" + " = " + km1 + " кілометри");
+} else if (km1 === 0.5) {
+  console.log(m1 + " метра" + " = " + km1 + " кілометра");
+} else {
+  console.log(m1 + " метрів" + " = " + km1 + " кілометрів");
+}
+}
+
+metersOnKilometers (32);

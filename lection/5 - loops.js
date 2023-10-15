@@ -48,3 +48,25 @@ let i = 0;
 for(i; i < arr1.length; i ++){
     console.log(arr1[i]);
 }
+
+let arrrr = [3, 5, 6, 7, 11];
+
+for(let i = 0; i < arrrr.length; i++){
+    if(i === 3){
+        continue;
+    }
+    console.log(`i = ${i}`);
+    console.log(`arrrr element = ${arrrr[i]}`);
+}
+
+let arrrray = [3, 5, 6, 7, 11];
+
+for(let i = 0; i < arrrray.length; i++){
+    if(i === 3){
+        break;
+    }
+    console.log(`i = ${i}`);
+    console.log(`arrrray element = ${arrrray[i]}`);
+}
+
+
